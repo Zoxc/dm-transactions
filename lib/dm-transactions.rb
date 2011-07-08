@@ -134,6 +134,8 @@ module DataMapper
         ensure
           rollback unless complete
         end
+
+        rval
       else
         unless begin?
           raise "Illegal state for commit without block: #{state}"
